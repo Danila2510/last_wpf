@@ -1,0 +1,41 @@
+﻿<Window x:Class="last.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:last"
+        Title="Document" Height="350" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="Bold_font" Padding="10" Content="Bold" Click="ApplyChange"/>
+            <Button Name="Italic_font" Padding="10" Content="Italic" Click="ApplyChange"/>
+            <Button Name="Underline_font" Padding="10" Content="Underline" Click="ApplyChange"/>
+            <Button  Name="Clear_font" Padding="10" Content="Очистить" Click="ClearChanges"/>
+            <ComboBox Name="FontSize_Box" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedIndex="0">
+                <ComboBoxItem Content="12"/>
+                <ComboBoxItem Content="14"/>
+                <ComboBoxItem Content="16"/>
+                <ComboBoxItem Content="18"/>
+                <ComboBoxItem Content="20"/>
+                <ComboBoxItem Content="22"/>
+                <ComboBoxItem Content="24"/>
+            </ComboBox>
+            <ComboBox Name="FontColor_Box" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedIndex="0">
+                <ComboBoxItem Content="Черный"/>
+                <ComboBoxItem Content="Синий"/>
+                <ComboBoxItem Content="Фиолетовый"/>
+                <ComboBoxItem Content="Зеленый"/>
+                <ComboBoxItem Content="Красный"/>
+            </ComboBox>
+            <TextBlock Text="Начало" Padding="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox Name="Start_text" Width="50"/>
+            <TextBlock Text="Конец" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox Name="End_text" Width="50"/>
+        </StackPanel>
+        <RichTextBox Name="Text_Box" Grid.Row="1" AcceptsReturn="True"/>
+    </Grid>
+</Window>
